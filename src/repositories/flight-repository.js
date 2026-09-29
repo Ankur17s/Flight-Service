@@ -29,7 +29,8 @@ class FlightRepository extends CRUDRepository {
                     },
                     include: {
                         model: City,
-                        required: true
+                        required: true,
+                        as: 'cityDetails'
                     }
                 },
                 {
@@ -41,7 +42,8 @@ class FlightRepository extends CRUDRepository {
                     },
                     include: {
                         model: City,
-                        required: true
+                        required: true,
+                         as: 'cityDetails'
                     }
                 }
             ]
