@@ -23,7 +23,7 @@ async function createAirport(data) {
 
 async function getAirports() {
     try {
-        const airports = await airportRepository.getAll();
+        const airports = await airportRepository.getAllAirportsWithCities();
         return airports
     } catch (error) {
         throw new AppError('Cannot fetch all the airports', StatusCodes.INTERNAL_SERVER_ERROR)
